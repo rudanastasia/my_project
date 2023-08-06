@@ -41,8 +41,16 @@
         <div class="content"></div>
       </div>
     </script>
+    <div class="blocks-coloring-container">
+      <div class="controls">
+        <input type="number" min="0" class="quantity-selector" />
+        <input type="color" class="color-selector" />
+      </div>
+      <div class="blocks"></div>
+    </div>
     <script src="./js/script.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/block.js"></script>
 </body>
 </html>
