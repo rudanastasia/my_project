@@ -77,3 +77,33 @@ const filterArray = ( arrayToFilter, filterFn ) => {
 }
 
 console.log(filterArray(mixedArray , isEven));
+
+
+////////
+const leftBtn = document.querySelector("#left");
+const rightBtn = document.querySelector("#right");
+const items = document.querySelector("#items");
+const computedStyles = getComputedStyle(items);
+
+let currentRight = 0;
+
+rightBtn.addEventListener("click", e => {
+    e.preventDefault();
+
+    let currentRight = parseInt(computedStyles.right);
+
+    if (currentRight < 500) {
+        currentRight += 100;
+        items.style.right = '${currentRight + 100}px';
+    }
+});
+
+leftBtn.addEventListener("click", e => {
+    e.preventDefault();
+
+    let currentRight = parseInt(computedStyles.right);
+
+    if (currentRight > 0) {
+        items.style.right = '${currentRight - 100}px';
+    }
+});
