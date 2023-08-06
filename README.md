@@ -43,5 +43,6 @@
     </script>
     <script src="./js/script.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 </html>
