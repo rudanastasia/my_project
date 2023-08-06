@@ -83,7 +83,7 @@ console.log(filterArray(mixedArray , isEven));
 const leftBtn = document.querySelector("#left");
 const rightBtn = document.querySelector("#right");
 const items = document.querySelector("#items");
-const computedStyles = window.getComputedStyle(itemsList);
+const computedStyles = window.getComputedStyle(items);
 
 let currentRight = 0;
 
