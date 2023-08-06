@@ -80,30 +80,26 @@ console.log(filterArray(mixedArray , isEven));
 
 
 ////////
-const leftBtn = document.querySelector("#left");
-const rightBtn = document.querySelector("#right");
-const items = document.querySelector("#items");
-const computedStyles = window.getComputedStyle("#items");
+const left = document.querySelector("#left");
+  const right = document.querySelector("#right");
+  const items = document.querySelector("#items");
+  const computed = window.getComputedStyle(items);
 
-let currentRight = 0;
-
-rightBtn.addEventListener("click", e => {
+  right.addEventListener("click", function(e) {
     e.preventDefault();
-
-    let currentRight = parseInt(computedStyles.right);
+    let currentRight = parseInt(computed.right);
 
     if (currentRight < 500) {
-        currentRight += 100;
-        items.style.right = '${currentRight + 100}px';
+      items.style.right = currentRight + 100 + "px";
     }
-});
+  });
 
-leftBtn.addEventListener("click", e => {
+  left.addEventListener("click", function(e) {
     e.preventDefault();
-
-    let currentRight = parseInt(computedStyles.right);
+    let currentRight = parseInt(computed.right);
 
     if (currentRight > 0) {
-        items.style.right = '${currentRight - 100}px';
+      items.style.right = currentRight - 100 + "px";
     }
-});
+  });
+
