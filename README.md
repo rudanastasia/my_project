@@ -7,6 +7,7 @@
     <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/block.css">
 </head>
 <body>
     <h1>Test</h1>
