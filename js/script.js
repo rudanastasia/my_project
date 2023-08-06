@@ -83,21 +83,31 @@ console.log(filterArray(mixedArray , isEven));
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
 const itemsList = document.querySelector("#items");
+const computedStyles = window.getComputedStyle(itemsList);
+const items = document.querySelectorAll(".item");
 
-const loop = (direction, e) => {
+const minRight = 0;
+const itemWidth = getComputedStyle(items[0]).width;
+const step = parseInt(itemWidth);
+const preShownItems = 300 / step;
+const maxRight = (items.length - preShownItems) * step;
+let currentRight = 0;
+
+itemsList.style.right = currentRight;
+
+right.addEventListener("click", e => {
+  e.preventDefault();
+  if (currentRight < maxRight) {
+    currentRight += step;
+    itemsList.style.right = `${currentRight}px`;
+  }
+})
+
+left.addEventListener("click", e => {
   e.preventDefault();
 
-  if (direction === "right") {
-    itemsList.appendChild(itemsList.firstElementChild);
-  } else {
-    itemsList.insertBefore(itemsList.lastElementChild, items.firstElementChild);
+  if (currentRight > minRight) {
+    currentRight -= step;
+    itemsList.style.right = `${currentRight}px`;
   }
-};
-
-right.addEventListener("click", (e) => {
-  loop("right", e);
-});
-
-left.addEventListener("click", (e) => {
-  loop("left", e);
-});
+})
