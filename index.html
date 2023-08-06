@@ -6,6 +6,7 @@
     <title>Задачи по JS</title>
     <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
 </head>
 <body>
     <h1>Test</h1>
