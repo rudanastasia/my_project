@@ -64,7 +64,7 @@ const isEven = num => {
     return num % 2 == 0;
 }
 
-const filterArray = ( arr, filterFn ) => {
+const filterArray = ( arrayToFilter, filterFn ) => {
     const filteredArray = [];
 
     arrayToFilter.forEach(num => {
@@ -73,6 +73,7 @@ const filterArray = ( arr, filterFn ) => {
         }
     })
 
+    return filteredArray;
 }
 
-console.log (filterArray(mixedArray , isEven));
+console.log(filterArray(mixedArray , isEven));
