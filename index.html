@@ -10,7 +10,7 @@
 <body>
     <h1>Test</h1>
     <div class="simple-clider-container">
-        <a href="#" id="left" class="arrow"><-</a>
+        <a href="#" id="left" class="arrow">←</a>
         <div class="slider">
             <ul class="items" id="items">
                 <li class="item">1</li>
@@ -23,7 +23,7 @@
                 <li class="item">8</li>
             </ul>
         </div>
-        <a href="#" id="right" class="arrow">-></a>
+        <a href="#" id="right" class="arrow">→</a>
     </div>
 </body>
 </html>
